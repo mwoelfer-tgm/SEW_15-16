@@ -7,6 +7,8 @@ package Woelfer;
 
 import static org.junit.Assert.*;
 
+import java.util.StringTokenizer;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +24,9 @@ public class StringTokenizerTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testNextTokenWithSpaceDelimeter() {
+		StringTokenizer st = new StringTokenizer("This is a test");
+		assertEquals("This",st.nextToken());
 	}
 
 }
