@@ -35,4 +35,10 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer("This\tis\ta\ttest");
 		assertEquals("This",st.nextToken());
 	}
+	
+	@Test
+	public void testNextTokenWithNewLineDelimeter() {
+		StringTokenizer st = new StringTokenizer("This\nis\na\ntest");
+		assertEquals("This",st.nextToken());
+	}
 }
