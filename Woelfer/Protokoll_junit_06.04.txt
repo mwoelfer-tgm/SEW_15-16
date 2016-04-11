@@ -27,3 +27,17 @@
    => .class weil wir wollen die Klasse der Exception und nicht den Typ!
 
 9) @Test(expected=NoSuchElementException.class) 
+
+10) Git/Github:
+
+Zuerst wurde mit der Konsole in den Src Ordner des Projektes Navigiert. 
+10.1) Mit "git init" ein leeres lokales Git repository anlegen
+10.2) Mit "git remote add origin https://github.com/mwoelfer-tgm/SEW_15-16" das lokales mit dem repository auf Github.com "verbinden"
+10.3) Mit "git pull origin master" das lokale Repository auf den neuesten Stand bringen
+10.4) => Testfall hinzufügen im Java file
+10.5) Mit "git add ***.java" das Java file zur Staging area hinzufügen
+10.6) Mit "git -commit -m "Added new...." " den neu erstellten Testfall commiten
+10.7) Wiederhole Scrhitt 4-5-6 bis fertig
+10.8) Mit "git push --set-upstream origin master" synchronisiert man das lokale Repository mit dem auf Github (Mit der Option legt man branch und origin fest)
+10.9) Auf Github überprüfen ob passt => Commit history
+10.10) https://github.com/mwoelfer-tgm/SEW_15-16/tree/master/Woelfer
