@@ -29,4 +29,10 @@ public class StringTokenizerTest {
 		assertEquals("This",st.nextToken());
 	}
 
+	
+	@Test
+	public void testNextTokenWithTabulatorDelimeter() {
+		StringTokenizer st = new StringTokenizer("This\tis\ta\ttest");
+		assertEquals("This",st.nextToken());
+	}
 }
