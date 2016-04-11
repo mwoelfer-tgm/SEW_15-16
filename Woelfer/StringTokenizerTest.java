@@ -53,4 +53,10 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer("This\fis\fa\ftest");
 		assertEquals("This",st.nextToken());
 	}
+	
+	@Test(expected=NoSuchElementException.class)
+	public void testNextTokenWithoutExistingToken() {
+		StringTokenizer st = new StringTokenizer("");
+		st.nextToken();
+	}
 }
