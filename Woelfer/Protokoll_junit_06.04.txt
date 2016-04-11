@@ -1,0 +1,29 @@
+1) Zuerst wird eine Testklasse erstellt mithilfe von Eclipse: Neue Klasse => Junit Test Case => Häckchen setzen bei After Before und Test
+
+2) Dann wurde ein Attribut erstellt, welches dann in der Setup(Before) methode initialisiert wurde
+
+3) import static org.junit.Assert.*; => Dadurch muss man keine Klassennamen schreiben vor JUnit Methoden weil Methode ohne einer Instanz(!!!) ausgeführt werden kann
+
+4) testNextToken() Methode wurde geschrieben, wo mithilfe des StringTokenizer Attributes der erste Token getestet wurde
+
+5) Idee mit dem Attribut,Setup und testNextToken() wurde entfernt weil es nur String testet der durch Abstände geteilt ist(Das ist ein Test)
+   => Wir haben gesehen in Java API von StringTokenizer dass der Standart Delimeter(Trennzeichen) Abstand + \t\n\r\f ist, das bedeutet er trennt nach
+	- Abstand
+	- Tabulator
+	- Neue Zeile
+	- Carriage
+	- Feed Form
+
+6) Es wurden 5 neue Methoden hinzugefügt:
+	- testNextTokenWithSpaceDelimeter()	=> Das ist ein Test
+	- testNextTokenWithTabulatorDelimeter()	=> Das/tist/tein/tTest
+	- testNextTokenWithCarriageDelimeter()	=> Das/rist/rein/rTest
+	- testNextTokenWithNewLineDelimeter()	=> Das/nist/nein/nTest	
+	- testNextTokenWithFormFeedDelimeter()	=> Das/fist/fein/fTest
+
+7) Methode erstellt welche nextToken() testet wenn kein nächster Token vorhanden ist => NoSuchElementException
+
+8) In API nachgeschaut => @Test hat Parameter (expect=exception.class)
+   => .class weil wir wollen die Klasse der Exception und nicht den Typ!
+
+9) @Test(expected=NoSuchElementException.class) 
