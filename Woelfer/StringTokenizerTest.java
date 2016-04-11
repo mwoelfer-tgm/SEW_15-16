@@ -41,4 +41,10 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer("This\nis\na\ntest");
 		assertEquals("This",st.nextToken());
 	}
+	
+	@Test
+	public void testNextTokenWithCarriageDelimeter() {
+		StringTokenizer st = new StringTokenizer("This\ris\ra\rtest");
+		assertEquals("This",st.nextToken());
+	}
 }
