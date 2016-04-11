@@ -47,4 +47,10 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer("This\ris\ra\rtest");
 		assertEquals("This",st.nextToken());
 	}
+	
+	@Test
+	public void testNextTokenWithFormFeedDelimeter() {
+		StringTokenizer st = new StringTokenizer("This\fis\fa\ftest");
+		assertEquals("This",st.nextToken());
+	}
 }
