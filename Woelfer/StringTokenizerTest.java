@@ -7,6 +7,7 @@ package Woelfer;
 
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import org.junit.After;
@@ -57,6 +58,12 @@ public class StringTokenizerTest {
 	@Test(expected=NoSuchElementException.class)
 	public void testNextTokenWithoutExistingToken() {
 		StringTokenizer st = new StringTokenizer("");
+		st.nextToken();
+	}
+	
+	@Test(expected=NoSuchElementException.class)
+	public void testTokenWithOnlyDelimiters(){
+		StringTokenizer st = new StringTokenizer(" \t\n\r\f");
 		st.nextToken();
 	}
 }
