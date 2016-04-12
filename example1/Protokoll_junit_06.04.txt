@@ -1,4 +1,5 @@
 1) Zuerst wird eine Testklasse erstellt mithilfe von Eclipse: Neue Klasse => Junit Test Case => Häckchen setzen bei After Before und Test
+   => Rechtsklick auf Projekt -> Properties -> Java Build path -> Add Library -> Junit
 
 2) Dann wurde ein Attribut erstellt, welches dann in der Setup(Before) methode initialisiert wurde
 
@@ -6,7 +7,7 @@
 
 4) testNextToken() Methode wurde geschrieben, wo mithilfe des StringTokenizer Attributes der erste Token getestet wurde
 
-5) Idee mit dem Attribut,Setup und testNextToken() wurde entfernt weil es nur String testet der durch Abstände geteilt ist(Das ist ein Test)
+5) Idee mit dem Attribut,Setup und testNextToken() wurde entfernt weil es nur String testet der durch Abstände geteilt ist("Das ist ein Test")
    => Wir haben gesehen in Java API von StringTokenizer dass der Standart Delimeter(Trennzeichen) Abstand + \t\n\r\f ist, das bedeutet er trennt nach
 	- Abstand
 	- Tabulator
