@@ -78,4 +78,11 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer("This is a test");
 		assertEquals(4,st.countTokens());
 	}
+	
+	//Wenn der Delimiter nichts ist, wird der String einfach nach garnichts getrennt!
+	@Test
+	public void testNoDelimiter(){
+		StringTokenizer st = new StringTokenizer("This is a test","");
+		assertEquals("This is a test",st.nextToken());
+	}
 }
