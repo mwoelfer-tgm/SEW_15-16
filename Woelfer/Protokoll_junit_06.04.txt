@@ -41,3 +41,25 @@ Zuerst wurde mit der Konsole in den Src Ordner des Projektes Navigiert.
 10.8) Mit "git push --set-upstream origin master" synchronisiert man das lokale Repository mit dem auf Github (Mit der Option legt man branch und origin fest)
 10.9) Auf Github überprüfen ob passt => Commit history
 10.10) https://github.com/mwoelfer-tgm/SEW_15-16/tree/master/Woelfer
+
+11) 3 Weitere Tests hinzufügen => 
+	-String mit nur Trennzeichen
+	-Methode countToken testen falls keine Token vorhanden sind
+	-StringTokenizer mit keinem Delimiter
+
+12) Methode hinzugefügt:
+	testTokenWithOnlyDelimiters()
+	=>Eine NoSuchElementException wird erwartet weil es keine token gibt
+	=>@Test(expected=NoSuchElementException.class)
+
+13) 2 Methoden hinzugefügt:
+	- testCountTokenWithNoToken()
+	- testCountToken()
+
+14) Methode hinzugefügt:
+	- testNoDelimiter()
+	=> Ergebnis ist unbekannt das es sein könnte:
+		- Es wird nach jedem Zeichen getrennt
+		- Es wird garnicht getrennt
+		- Irgendeine Exception
+	Tatsächlich wird garnicht getrennt.
