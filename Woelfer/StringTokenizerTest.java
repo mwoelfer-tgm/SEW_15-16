@@ -66,4 +66,16 @@ public class StringTokenizerTest {
 		StringTokenizer st = new StringTokenizer(" \t\n\r\f");
 		st.nextToken();
 	}
+	
+	@Test
+	public void testCountTokenWithNoToken(){
+		StringTokenizer st = new StringTokenizer("");
+		assertEquals(0,st.countTokens());
+	}
+	
+	@Test
+	public void testCountToken(){
+		StringTokenizer st = new StringTokenizer("This is a test");
+		assertEquals(4,st.countTokens());
+	}
 }
