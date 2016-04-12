@@ -40,7 +40,7 @@ Zuerst wurde mit der Konsole in den Src Ordner des Projektes Navigiert.
 10.7) Wiederhole Scrhitt 4-5-6 bis fertig
 10.8) Mit "git push --set-upstream origin master" synchronisiert man das lokale Repository mit dem auf Github (Mit der Option legt man branch und origin fest)
 10.9) Auf Github überprüfen ob passt => Commit history
-10.10) https://github.com/mwoelfer-tgm/SEW_15-16/tree/master/Woelfer
+10.10) https://github.com/mwoelfer-tgm/SEW_15-16/tree/master/example1
 
 11) 3 Weitere Tests hinzufügen => 
 	-String mit nur Trennzeichen
