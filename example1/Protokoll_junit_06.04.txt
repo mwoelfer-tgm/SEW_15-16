@@ -1,0 +1,65 @@
+1) Zuerst wird eine Testklasse erstellt mithilfe von Eclipse: Neue Klasse => Junit Test Case => Häckchen setzen bei After Before und Test
+
+2) Dann wurde ein Attribut erstellt, welches dann in der Setup(Before) methode initialisiert wurde
+
+3) import static org.junit.Assert.*; => Dadurch muss man keine Klassennamen schreiben vor JUnit Methoden weil Methode ohne einer Instanz(!!!) ausgeführt werden kann
+
+4) testNextToken() Methode wurde geschrieben, wo mithilfe des StringTokenizer Attributes der erste Token getestet wurde
+
+5) Idee mit dem Attribut,Setup und testNextToken() wurde entfernt weil es nur String testet der durch Abstände geteilt ist(Das ist ein Test)
+   => Wir haben gesehen in Java API von StringTokenizer dass der Standart Delimeter(Trennzeichen) Abstand + \t\n\r\f ist, das bedeutet er trennt nach
+	- Abstand
+	- Tabulator
+	- Neue Zeile
+	- Carriage
+	- Feed Form
+
+6) Es wurden 5 neue Methoden hinzugefügt:
+	- testNextTokenWithSpaceDelimeter()	=> Das ist ein Test
+	- testNextTokenWithTabulatorDelimeter()	=> Das/tist/tein/tTest
+	- testNextTokenWithCarriageDelimeter()	=> Das/rist/rein/rTest
+	- testNextTokenWithNewLineDelimeter()	=> Das/nist/nein/nTest	
+	- testNextTokenWithFormFeedDelimeter()	=> Das/fist/fein/fTest
+
+7) Methode erstellt welche nextToken() testet wenn kein nächster Token vorhanden ist => NoSuchElementException
+
+8) In API nachgeschaut => @Test hat Parameter (expect=exception.class)
+   => .class weil wir wollen die Klasse der Exception und nicht den Typ!
+
+9) @Test(expected=NoSuchElementException.class) 
+
+10) Git/Github:
+
+Zuerst wurde mit der Konsole in den Src Ordner des Projektes Navigiert. 
+10.1) Mit "git init" ein leeres lokales Git repository anlegen
+10.2) Mit "git remote add origin https://github.com/mwoelfer-tgm/SEW_15-16" das lokales mit dem repository auf Github.com "verbinden"
+10.3) Mit "git pull origin master" das lokale Repository auf den neuesten Stand bringen
+10.4) => Testfall hinzufügen im Java file
+10.5) Mit "git add ***.java" das Java file zur Staging area hinzufügen
+10.6) Mit "git -commit -m "Added new...." " den neu erstellten Testfall commiten
+10.7) Wiederhole Scrhitt 4-5-6 bis fertig
+10.8) Mit "git push --set-upstream origin master" synchronisiert man das lokale Repository mit dem auf Github (Mit der Option legt man branch und origin fest)
+10.9) Auf Github überprüfen ob passt => Commit history
+10.10) https://github.com/mwoelfer-tgm/SEW_15-16/tree/master/Woelfer
+
+11) 3 Weitere Tests hinzufügen => 
+	-String mit nur Trennzeichen
+	-Methode countToken testen falls keine Token vorhanden sind
+	-StringTokenizer mit keinem Delimiter
+
+12) Methode hinzugefügt:
+	testTokenWithOnlyDelimiters()
+	=>Eine NoSuchElementException wird erwartet weil es keine token gibt
+	=>@Test(expected=NoSuchElementException.class)
+
+13) 2 Methoden hinzugefügt:
+	- testCountTokenWithNoToken()
+	- testCountToken()
+
+14) Methode hinzugefügt:
+	- testNoDelimiter()
+	=> Ergebnis ist unbekannt das es sein könnte:
+		- Es wird nach jedem Zeichen getrennt
+		- Es wird garnicht getrennt
+		- Irgendeine Exception
+	Tatsächlich wird garnicht getrennt.
