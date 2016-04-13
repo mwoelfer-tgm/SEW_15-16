@@ -62,4 +62,13 @@ public class gleichSchenkeligTest {
 		
 		assertTrue(dreieck.gleichSchenkelig());
 	}
+	
+	@Test
+	public void testANichtC() {
+		dreieck.setSeite_a(3);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(4);
+		
+		assertFalse(dreieck.gleichSchenkelig());
+	}
 }
