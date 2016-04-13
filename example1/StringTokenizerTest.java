@@ -3,7 +3,7 @@
  * @Version 2016-04-11
  */
 
-package Woelfer;
+package example1;
 
 import static org.junit.Assert.*;
 
