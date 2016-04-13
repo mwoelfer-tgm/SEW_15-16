@@ -79,6 +79,34 @@ public class testIstDreieck {
 		
 		assertFalse(dreieck.istDreieck());
 	}
+	
+	@Test
+	public void testIstAPlusBGleichC(){
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(3);
+		
+		assertFalse(dreieck.istDreieck());
+	}
+	
+	@Test
+	public void testIstAPlusCGleichB(){
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(3);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.istDreieck());
+	}
+	
+	@Test
+	public void testIstCPlusBGleichA(){
+		dreieck.setSeite_a(3);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(1);
+		
+		assertFalse(dreieck.istDreieck());
+	}
+	
 	@After
 	public void tearDown() throws Exception {
 	}
