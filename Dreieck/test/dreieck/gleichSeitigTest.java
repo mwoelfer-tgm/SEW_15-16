@@ -28,11 +28,49 @@ public class gleichSeitigTest {
 		assertTrue(dreieck.gleichSeitig());
 	}
 	
+	
+	
 	@Test
 	public void testSitesNotEqual() {
 		dreieck.setSeite_a(1);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(3);
+		
+		assertFalse(dreieck.gleichSeitig());
+	}
+	
+	@Test
+	public void testSitesNotEqualA() {
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.gleichSeitig());
+	}
+	
+	@Test
+	public void testSitesNotEqualB() {
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(1);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.gleichSeitig());
+	}
+	
+	@Test
+	public void testSitesNotEqualC() {
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(1);
+		
+		assertFalse(dreieck.gleichSeitig());
+	}
+	
+	@Test
+	public void testSitesEqualNoTriangle() {
+		dreieck.setSeite_a(-1);
+		dreieck.setSeite_b(-1);
+		dreieck.setSeite_c(-1);
 		
 		assertFalse(dreieck.gleichSeitig());
 	}

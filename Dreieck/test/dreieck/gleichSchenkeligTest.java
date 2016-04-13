@@ -7,18 +7,59 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class gleichSchenkeligTest {
+	int seite_a;
+	int seite_b;
+	int seite_c;
+	
+	private Dreieck dreieck;
 
 	@Before
 	public void setUp() throws Exception {
+		dreieck = new Dreieck(seite_a,seite_b,seite_c);
+	}
+	@Test
+	public void testNoTriangle() {
+		dreieck.setSeite_a(0);
+		dreieck.setSeite_b(0);
+		dreieck.setSeite_c(3);
+		
+		assertFalse(dreieck.gleichSchenkelig());
+	}
+	
+	@Test
+	public void testNoIloscelesTriangle() {
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(3);
+		
+		assertFalse(dreieck.gleichSchenkelig());
 	}
 
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testAPlusBEqual() {
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(3);
+		
+		assertTrue(dreieck.gleichSchenkelig());
 	}
-
+	
+	@Test
+	public void testAPlusCEqual() {
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(3);
+		dreieck.setSeite_c(2);
+		
+		assertTrue(dreieck.gleichSchenkelig());
+	}
+	
+	@Test
+	public void testBPlusCEqual() {
+		dreieck.setSeite_a(3);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(2);
+		
+		assertTrue(dreieck.gleichSchenkelig());
+	}
 }
