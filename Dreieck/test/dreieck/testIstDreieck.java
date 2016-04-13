@@ -164,11 +164,11 @@ public class testIstDreieck {
 	
 	@Test
 	public void testIstDreieckTrue(){
-		dreieck.setSeite_a(5);
-		dreieck.setSeite_b(2);
-		dreieck.setSeite_c(2);
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(1);
+		dreieck.setSeite_c(1);
 		
-		assertFalse(dreieck.istDreieck());
+		assertTrue(dreieck.istDreieck());
 	}
 	
 	@After
