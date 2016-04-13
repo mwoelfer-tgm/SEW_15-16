@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class gleichSeitigTest {
+public class TestGleichSeitig {
 	int seite_a;
 	int seite_b;
 	int seite_c;

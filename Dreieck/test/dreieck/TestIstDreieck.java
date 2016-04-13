@@ -14,7 +14,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class testIstDreieck {
+public class TestIstDreieck {
 	int seite_a;
 	int seite_b;
 	int seite_c;
