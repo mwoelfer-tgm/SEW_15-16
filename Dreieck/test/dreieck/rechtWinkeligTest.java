@@ -28,6 +28,15 @@ public class rechtWinkeligTest {
 	}
 	
 	@Test
+	public void testIstAGroesserBKleinerC() {
+		dreieck.setSeite_a(5);
+		dreieck.setSeite_b(4);
+		dreieck.setSeite_c(6);
+		
+		assertFalse(dreieck.rechtWinkelig());
+	}
+	
+	@Test
 	public void testIstAGroesste() {
 		dreieck.setSeite_a(5);
 		dreieck.setSeite_b(4);
@@ -62,5 +71,15 @@ public class rechtWinkeligTest {
 		
 		assertFalse(dreieck.rechtWinkelig());
 	}
+	
+	@Test
+	public void testIstNichtRechtWinkelig() {
+		dreieck.setSeite_a(3);
+		dreieck.setSeite_b(3);
+		dreieck.setSeite_c(4);
+		
+		assertFalse(dreieck.rechtWinkelig());
+	}
+	
 	
 }
