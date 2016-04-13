@@ -18,7 +18,7 @@ public class gleichSchenkeligTest {
 		dreieck = new Dreieck(seite_a,seite_b,seite_c);
 	}
 	@Test
-	public void testNoTriangle() {
+	public void testKeinDreieck() {
 		dreieck.setSeite_a(0);
 		dreieck.setSeite_b(0);
 		dreieck.setSeite_c(3);
@@ -27,7 +27,7 @@ public class gleichSchenkeligTest {
 	}
 	
 	@Test
-	public void testNoIloscelesTriangle() {
+	public void testKeinGleichSchenkeligesDreieck() {
 		dreieck.setSeite_a(1);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(3);
@@ -37,7 +37,7 @@ public class gleichSchenkeligTest {
 
 
 	@Test
-	public void testAPlusBEqual() {
+	public void testAPlusBGleich() {
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(3);
@@ -46,7 +46,7 @@ public class gleichSchenkeligTest {
 	}
 	
 	@Test
-	public void testAPlusCEqual() {
+	public void testAPlusCGleich() {
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(3);
 		dreieck.setSeite_c(2);
@@ -55,7 +55,7 @@ public class gleichSchenkeligTest {
 	}
 	
 	@Test
-	public void testBPlusCEqual() {
+	public void testBPlusCGleich() {
 		dreieck.setSeite_a(3);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(2);

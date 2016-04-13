@@ -20,7 +20,7 @@ public class gleichSeitigTest {
 
 
 	@Test
-	public void testSitesAllEqual() {
+	public void testGleichSeitig() {
 		dreieck.setSeite_a(1);
 		dreieck.setSeite_b(1);
 		dreieck.setSeite_c(1);
@@ -31,7 +31,7 @@ public class gleichSeitigTest {
 	
 	
 	@Test
-	public void testSitesNotEqual() {
+	public void testNichtGleichSeitig() {
 		dreieck.setSeite_a(1);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(3);
@@ -40,7 +40,7 @@ public class gleichSeitigTest {
 	}
 	
 	@Test
-	public void testSitesNotEqualA() {
+	public void testSeitenGleichAusserA() {
 		dreieck.setSeite_a(1);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(2);
@@ -49,7 +49,7 @@ public class gleichSeitigTest {
 	}
 	
 	@Test
-	public void testSitesNotEqualB() {
+	public void testSeitenGleichAusserB() {
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(1);
 		dreieck.setSeite_c(2);
@@ -58,7 +58,7 @@ public class gleichSeitigTest {
 	}
 	
 	@Test
-	public void testSitesNotEqualC() {
+	public void testSeitenGleichAusserC() {
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(1);
@@ -67,7 +67,7 @@ public class gleichSeitigTest {
 	}
 	
 	@Test
-	public void testSitesEqualNoTriangle() {
+	public void testSeitenGleichKeinDreieck() {
 		dreieck.setSeite_a(-1);
 		dreieck.setSeite_b(-1);
 		dreieck.setSeite_c(-1);

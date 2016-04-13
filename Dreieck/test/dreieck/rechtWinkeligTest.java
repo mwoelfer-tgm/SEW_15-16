@@ -19,7 +19,7 @@ public class rechtWinkeligTest {
 	}
 
 	@Test
-	public void testIsNoTriangle() {
+	public void testIstKeinDreieck() {
 		dreieck.setSeite_a(-1);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(3);

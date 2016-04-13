@@ -136,7 +136,7 @@ public class testIstDreieck {
 	}
 	
 	@Test
-	public void testIstAPlusBSmallerC(){
+	public void testIstAPlusBKleinerC(){
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(5);
@@ -145,7 +145,7 @@ public class testIstDreieck {
 	}
 	
 	@Test
-	public void testIstAPlusCSmallerB(){
+	public void testIstAPlusCKleinerB(){
 		dreieck.setSeite_a(2);
 		dreieck.setSeite_b(5);
 		dreieck.setSeite_c(2);
@@ -154,7 +154,7 @@ public class testIstDreieck {
 	}
 	
 	@Test
-	public void testIstBPlusCSmallerA(){
+	public void testIstBPlusCKleinerA(){
 		dreieck.setSeite_a(5);
 		dreieck.setSeite_b(2);
 		dreieck.setSeite_c(2);
