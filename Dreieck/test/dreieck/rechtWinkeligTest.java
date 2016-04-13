@@ -81,5 +81,13 @@ public class rechtWinkeligTest {
 		assertFalse(dreieck.rechtWinkelig());
 	}
 	
+	@Test
+	public void testIstCGroesserBKleinerA() {
+		dreieck.setSeite_a(6);
+		dreieck.setSeite_b(3);
+		dreieck.setSeite_c(6);
+		
+		assertFalse(dreieck.rechtWinkelig());
+	}
 	
 }
