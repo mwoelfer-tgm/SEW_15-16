@@ -107,8 +107,7 @@ public class testIstDreieck {
 		assertFalse(dreieck.istDreieck());
 	}
 	
-	
-	
+
 	@Test
 	public void testIstAPlusBMinus(){
 		dreieck.setSeite_a(1);
@@ -136,9 +135,41 @@ public class testIstDreieck {
 		assertFalse(dreieck.istDreieck());
 	}
 	
+	@Test
+	public void testIstAPlusBSmallerC(){
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(5);
+		
+		assertFalse(dreieck.istDreieck());
+	}
 	
+	@Test
+	public void testIstAPlusCSmallerB(){
+		dreieck.setSeite_a(2);
+		dreieck.setSeite_b(5);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.istDreieck());
+	}
 	
+	@Test
+	public void testIstBPlusCSmallerA(){
+		dreieck.setSeite_a(5);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.istDreieck());
+	}
 	
+	@Test
+	public void testIstDreieckTrue(){
+		dreieck.setSeite_a(5);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(2);
+		
+		assertFalse(dreieck.istDreieck());
+	}
 	
 	@After
 	public void tearDown() throws Exception {
