@@ -27,5 +27,14 @@ public class gleichSeitigTest {
 		
 		assertTrue(dreieck.gleichSeitig());
 	}
+	
+	@Test
+	public void testSitesNotEqual() {
+		dreieck.setSeite_a(1);
+		dreieck.setSeite_b(2);
+		dreieck.setSeite_c(3);
+		
+		assertFalse(dreieck.gleichSeitig());
+	}
 
 }
