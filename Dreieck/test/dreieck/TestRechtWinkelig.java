@@ -27,14 +27,6 @@ public class TestRechtWinkelig {
 		assertFalse(dreieck.rechtWinkelig());
 	}
 	
-	@Test
-	public void testIstAGroesserBKleinerC() {
-		dreieck.setSeite_a(5);
-		dreieck.setSeite_b(4);
-		dreieck.setSeite_c(6);
-		
-		assertFalse(dreieck.rechtWinkelig());
-	}
 	
 	@Test
 	public void testIstAGroesste() {
